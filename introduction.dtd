@@ -11,15 +11,16 @@
 <section id="payment_options">
 <title>Payment Options</title>
 <ol>
-<li>Online:
+<li>
+Online:
 <ul>
 <li>Create a chekout page with PayZip.</li>
 <li>Embed a custom payment form on website or application.</li>
 <li>Accept payment without code.</li>
 </ul>
 </li>
-
-<li>Subscription:
+<li>
+Subscription:
 <ul>
 <li>Set up a subscription with trial period or billing cycle.</li>
 <li>Send invoices on a recurring schedule.</li>
