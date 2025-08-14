@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "getting_started.dtd">
+<topic id="getting_started">
+<title>Getting Started</title>
+<shortdesc>The guide is about how to start using PayZip api.</shortdesc>
+<body>
+<section id="create_account">
+<p><b>Create an account</b></p>
+<p>To start using PayZip, you need to create an account. Visit the PayZip website and sign up for a new account. You will need to provide some basic information such as your name, email address, and a password.</p>
+</section>
+</body>
+</topic>

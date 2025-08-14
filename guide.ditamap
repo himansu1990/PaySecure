@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "guide.dtd">
+<map title="Payment Gateway API Guide" id="payment-gateway-api-guide.ditamap">
+<title>Payment Gateway API Guide</title>
+<topicref href="introduction.dtd" format="dita" type="topic" navtitle="Introduction"/>
+<topicref href="getting_started.dtd" format="dita" type="topic" navtitle="Getting Started"/>
+</map>
