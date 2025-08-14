@@ -1,39 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "introduction.dtd"/>
 <topic id="introduction">
-    <title>Introduction</title>
-    <shortdesc>Integrate PayZip to start accepting payments online.</shortdesc>
-    <body>
-        <section id="overview">
-            <title>Overview</title>
-            <p>Welcome to PayZip API — a fast, secure, and developer-friendly way to accept payment for your web or mobile application.</p>
-        </section>
+<title>Introduction</title>
+<shortdesc>Integrate PayZip to start accepting payment online</shortdesc>
+<body>
+<section id="overview">
+<p><b>Overview</b></p>
+<p>Welcome to PayZip API - a fast, secure, and developer friendly way to accept payment for your web or mobile application.</p>
+</section>
+<section id="payment_options">
+<p><b>Payment Options</b></p>
+<ol>
+<li>Online:
+<ul>
+<li>Create a chekout page with PayZip.</li>
+<li>Embed a custom payment form on website or application.</li>
+<li>Accept payment without code.</li>
+</ul>
+</li>
 
-        <section id="payment_options">
-            <title>Payment Options</title>
-            <ol>
-                <li>
-                    Online:
-                    <ul>
-                        <li>Create a checkout page with PayZip.</li>
-                        <li>Embed a custom payment form on your website or application.</li>
-                        <li>Accept payment without code.</li>
-                    </ul>
-                </li>
-                <li>
-                    Subscription:
-                    <ul>
-                        <li>Set up a subscription with a trial period or billing cycle.</li>
-                        <li>Send invoices on a recurring schedule.</li>
-                        <li>Change the billing cycle, price, apply discounts, and more.</li>
-                    </ul>
-                </li>
-            </ol>
-        </section>
-
-        <section id="next_steps">
-            <title>Next Steps</title>
-            <p>To get started with PayZip API, see <xref href="getting_started.dita">Getting Started</xref>.</p>
-        </section>
-    </body>
+<li>Subscription:
+<ul>
+<li>Set up a subscription with trial period or billing cycle.</li>
+<li>Send invoices on a recurring schedule.</li>
+<li>Change the billing cycle, price, apply discounts, and maore.</li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="next_steps">
+<p><b>Next Steps</b></p>
+<p>To get started with PayZip API, see <link href="getting_started.dtd">Getting Started</link></p>
+</section>
+</body>
 </topic>
