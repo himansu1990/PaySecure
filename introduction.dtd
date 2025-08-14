@@ -7,7 +7,7 @@
 <section id="overview">
 <p><b>Overview</b></p>
 <p>Welcome to PayZip API - a fast, secure, and developer friendly way to accept payment for your web or mobile application.</p>
-<section>
+</section>
 <section id="payment_options">
 <p><b>Payment Options</b></p>
 <ol>
@@ -26,6 +26,10 @@
 </ul>
 </li>
 </ol>
+</section>
+<section id="next_steps">
+<p><b>Next Steps</b></p>
+<p>To get started with PayZip API, <link href="getting_started.dtd"/></p>
 </section>
 </body>
 </topic>
