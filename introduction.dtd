@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"/>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "introduction.dtd"/>
 <topic id="introduction">
 <title>Introduction</title>
 <shortdesc>Integrate PayZip to start accepting payment online</shortdesc>
 <body>
 <section id="overview">
-<p><b>Overview</b></p>
+<title>Overview</title>>
 <p>Welcome to PayZip API - a fast, secure, and developer friendly way to accept payment for your web or mobile application.</p>
 </section>
 <section id="payment_options">
-<p><b>Payment Options</b></p>
+<title>Payment Options</title>
 <ol>
 <li>Online:
 <ul>
@@ -29,9 +29,8 @@
 </ol>
 </section>
 <section id="next_steps">
-<p><b>Next Steps</b></p>
+<title>Next Steps</title>
 <p>To get started with PayZip API, see <link href="getting_started.dtd">Getting Started</link></p>
 </section>
 </body>
 </topic>
-
