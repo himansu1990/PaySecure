@@ -14,11 +14,12 @@
 <li>
 Online:
 <ul>
-<li>Create a chekout page with PayZip.</li>
+<li>Create a checkout page with PayZip.</li>
 <li>Embed a custom payment form on website or application.</li>
 <li>Accept payment without code.</li>
 </ul>
 </li>
+
 <li>
 Subscription:
 <ul>
@@ -35,6 +36,3 @@ Subscription:
 </section>
 </body>
 </topic>
-
-
-
