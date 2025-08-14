@@ -5,7 +5,7 @@
 <shortdesc>This document provides a guide to getting started with DITA, including installation, tools, and basic concepts.</shortdesc>
 <body>  
 <section id="installation">
-<title>installation</title>
+<title>Installation</title>
 <p>To get started with DITA, you need to install a DITA-compliant XML editor or authoring tool. Some popular options include Oxygen XML Editor, Adobe FrameMaker, and DITA Open Toolkit. These tools provide features for creating, editing, and publishing DITA documents.</p>
 </section>
 <section id="tools">
@@ -14,3 +14,4 @@
 </section>  
 </body>
 </topic>
+
