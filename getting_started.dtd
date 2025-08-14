@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "getting_started.dtd">
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="getting_started">
-<title>Getting Started</title>
-<shortdesc>The guide is about how to start using PayZip api.</shortdesc>
-<body>
-<section id="create_account">
-<p><b>Create an account</b></p>
-<p>To start using PayZip, you need to create an account. Visit the PayZip website and sign up for a new account. You will need to provide some basic information such as your name, email address, and a password.</p>
+<title>Getting Started with DITA</title>
+<shortdesc>This document provides a guide to getting started with DITA, including installation, tools, and basic concepts.</shortdesc>
+<body>  
+<section id="installation">
+<title>installation</title>
+<p>To get started with DITA, you need to install a DITA-compliant XML editor or authoring tool. Some popular options include Oxygen XML Editor, Adobe FrameMaker, and DITA Open Toolkit. These tools provide features for creating, editing, and publishing DITA documents.</p>
 </section>
+<section id="tools">
+<title>Tools for DITA</title>
+<p>There are several tools available for working with DITA. The DITA Open Toolkit (DITA-OT) is a widely used open-source publishing engine that transforms DITA content into various output formats such as HTML, PDF, and more. Other tools include XML editors with DITA support, which provide features like validation, content reuse, and topic-based authoring.</p>
+</section>  
 </body>
 </topic>
