@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"/>
 <topic id="introduction">
 <title>Introduction</title>
 <shortdesc>Integrate PayZip to start accepting payment online</shortdesc>
@@ -35,3 +34,4 @@ Subscription:
 </section>
 </body>
 </topic>
+
