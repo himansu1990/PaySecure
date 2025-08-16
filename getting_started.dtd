@@ -1,17 +1,264 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="getting_started">
-<title>Getting Started with DITA</title>
-<shortdesc>This document provides a guide to getting started with DITA, including installation, tools, and basic concepts.</shortdesc>
-<body>  
-<section id="installation">
-<title>Installation</title>
-<p>To get started with DITA, you need to install a DITA-compliant XML editor or authoring tool. Some popular options include Oxygen XML Editor, Adobe FrameMaker, and DITA Open Toolkit. These tools provide features for creating, editing, and publishing DITA documents.</p>
+<title>Getting Started</title>
+<shortdesc>The guide is about how to start using PaySecure api.</shortdesc>
+<body>
+<section id="create_account">
+<title>Create an account</title>
+<p>To start using PaySecure, you need to create an account. Visit the PaySecure website and sign up for a new account. You will need to provide some basic information such as your name, email address, and a password.</p>
 </section>
-<section id="tools">
-<title>Tools for DITA</title>
-<p>There are several tools available for working with DITA. The DITA Open Toolkit (DITA-OT) is a widely used open-source publishing engine that transforms DITA content into various output formats such as HTML, PDF, and more. Other tools include XML editors with DITA support, which provide features like validation, content reuse, and topic-based authoring.</p>
-</section>  
+<section id="get_api_key">
+<title>Get your API key</title>
+<p>Once you have created an account, you will need to obtain an api key. To get the api key, you need to navigate to the api section on the dashboard.</p>
+<p>PaySecure authenticates API requests using API keys. If a request doesn't have a valid key, it returns an
+<b>invalid request error</b>.</p>
+</section>
+<section id="base_url">
+<title>Base URLs</title>
+<ul>
+<li>Production: <i>https://api.paysecure.com/v1 </i> </li>
+<li>Dandbox: <i>https://sandbox.paysecure.com/v1</i></li>
+</ul>
+</section>
+<section id="authentication">
+<title>Authentication</title>
+<p>All API requests must include the API keyin the request header. The key should be included as follows:</p>
+<title>Generate Token</title>
+<p><b>Endpoint:</b></p>
+<codeblock output="json">POST /auth/token</codeblock>
+</section>
+<section id="request_body">
+<table>
+<title>Request Body</title>
+<tgroup cols="4">
+<colspec colwidth="1*"/>
+<colspec colwidth="2*"/>
+<colspec colwidth="3*"/>
+<colspec colwidth="4*"/>
+<thead>
+<row>
+<entry align="center">Parameter</entry>
+<entry align="center">Type</entry>
+<entry align="center">Required</entry>
+<entry align="center">Description</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry>client_id</entry>
+<entry>String</entry>
+<entry>Yes</entry>
+<entry>PaySecure client ID</entry>
+</row>
+<row>
+<entry>client_secret</entry>
+<entry>String</entry>
+<entry>Yes</entry>
+<entry>PaySecure API key</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</section>
+<section id="example_request">
+<title>Example Request</title>
+<codeblock output="bash">
+curl -X POST "https://api.paysecure.com/v1/auth/token" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "client_id": "YOUR_CLIENT_ID",
+    "client_secret": "YOUR_CLIENT_SECRET"
+  }'
+
+</codeblock>
+<title>Example Response</title>
+<codeblock output="json">
+{
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR...",
+  "expires_in": 3600,
+  "token_type": "Bearer"
+}
+</codeblock>
+</section>
+<section id="endpoints">
+<title>Endpoints</title>
+<p><b>1.Create Payment</b></p>
+<codeblock output="bash">
+POST /payments
+
+</codeblock>
+<p>Request Body</p>
+<table>
+<tgroup colspec="4">
+<colspec colwidth="1*"/>
+<colspec colwidth="2*"/>
+<colspec colwidth="3*"/>
+<colspec colwidth="4*"/>
+<thead>
+<row>
+<entry align="center">Parameter</entry>
+<entry align="center">Type</entry>
+<entry aligh="center">Required</entry>
+<entry align="center">Description</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry align="center">amount</entry>
+<entry align="center">Number</entry>
+<entry align="center">Yes</entry>
+<entry align="center">Payment amount</entry>
+</row>
+<row>
+<entry align="center">currency</entry>
+<entry align="center">String</entry>
+<entry align="cennter">Yes</entry>
+<entry align="center">Currency code(INR, USD, EUR)</entry>
+</row>
+<row>
+<entry align="center">customer_email</entry>
+<entry align="center">String</entry>
+<entry align="center">Yes</entry>
+<entry align="center">Customer's email</entry>
+</row>
+<row>
+<entry align="center">redirect_url</entry>
+<entry align="center">String</entry>
+<entry align="center">Yes</entry>
+<entry align="center">Redirect after payment completion</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+
+<p>Example Request:</p>
+<codeblock output="bash">
+curl -X POST "https://api.paysecure.com/v1/payments" \
+  -H "Authorization: Bearer ACCESS_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "amount": 100.00,
+    "currency": "USD",
+    "customer_email": "customer@example.com",
+    "redirect_url": "https://merchant.com/payment-success"
+  }'
+
+</codeblock>
+<p>Example Response:</p>
+<codeblock output="json">
+{
+  "payment_id": "pay_12345",
+  "payment_url": "https://paysecure.com/pay/pay_12345"
+}
+
+</codeblock>
+<p>2. Get Payment Status</p>
+<p>Endpoint:</p>
+<codeblock output="bash">
+GET /payments/{payment_id}
+</codeblock>
+<p>Example Request:</p>
+<codeblock output="bash">
+curl -X GET "https://api.paysecure.com/v1/payments/pay_12345" \
+  -H "Authorization: Bearer ACCESS_TOKEN"
+</codeblock>
+<p>Example Response:</p>
+<codeblock output="json">
+{
+  "payment_id": "pay_12345",
+  "status": "SUCCESS",
+  "amount": 100.00,
+  "currency": "USD"
+}
+
+</codeblock>
+</section>
+<section id="error_codes">
+<table>
+<tgroup colspec="3">
+<colspec colwidth="1*"/>
+<colspec colwidth="2*"/>
+<colspec colwidth="3*"/>
+<thead>
+<row>
+<entry align="center">Code</entry>
+<entry align="center">Message</entry>
+<entry align="center">Possible Cause</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry align="center">400</entry>
+<entry align="center">Invalid Parameters</entry>
+<entry align="center">Missing or invalid parameter</entry>
+</row>
+<row>
+<entry align="center">401</entry>
+<entry align="center">Unauthorized</entry>
+<entry align="center">Missing/expire token</entry>
+</row>
+<row>
+<entry align="center">500</entry>
+<entry align="center">Server Error</entry>
+<entry align="center">Internal server issue</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</section>
+<section id="quick_start">
+<title>Quick Start Examples</title>
+<p>JavaScript(Node.js)</p>
+<codeblock output="javascript">
+const fetch = require('node-fetch');
+
+async function createPayment() {
+  const token = 'ACCESS_TOKEN';
+  const response = await fetch('https://api.paysecure.com/v1/payments', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${token}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      amount: 100.00,
+      currency: 'USD',
+      customer_email: 'customer@example.com',
+      redirect_url: 'https://merchant.com/payment-success'
+    })
+  });
+
+  const data = await response.json();
+  console.log(data);
+}
+
+createPayment();
+
+</codeblock>
+<p>Python</p>
+<codeblock output="python">
+import requests
+
+token = "ACCESS_TOKEN"
+url = "https://api.paysecure.com/v1/payments"
+
+payload = {
+    "amount": 100.00,
+    "currency": "USD",
+    "customer_email": "customer@example.com",
+    "redirect_url": "https://merchant.com/payment-success"
+}
+
+headers = {
+    "Authorization": f"Bearer {token}",
+    "Content-Type": "application/json"
+}
+
+response = requests.post(url, json=payload, headers=headers)
+print(response.json())
+
+</codeblock>
+</section>
 </body>
 </topic>
-
