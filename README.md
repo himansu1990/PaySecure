@@ -1,7 +1,7 @@
-# PayZip Documentation 
+# PaySecure Documentation 
 
 ## Overview
 
-An overview about how to use PayZip api.
+An overview about how to use PaySecure api.
 
-**Note:** This guide is for educational purpose and has no relation with [payzip](https://www.payzip.co.uk/) and with their API. 
+**Note:** This guide is for educational purpose only. 
