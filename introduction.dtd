@@ -2,11 +2,11 @@
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="introduction">
 <title>Introduction</title>
-<shortdesc>Integrate PayZip to start accepting payment online</shortdesc>
+<shortdesc>Integrate PaySecure to start accepting payment online</shortdesc>
 <body>
 <section id="overview">
 <title>Overview</title>
-<p>Welcome to PayZip API - a fast, secure, and developer friendly way to accept payment for your web or mobile application.</p>
+<p>Welcome to PaySecure API - a fast, secure, and developer friendly way to accept payment for your web or mobile application.</p>
 </section>
 <section id="payment_options">
 <title>Payment Options</title>
@@ -14,7 +14,7 @@
 <li>
 Online:
 <ul>
-<li>Create a checkout page with PayZip.</li>
+<li>Create a checkout page with PaySecure.</li>
 <li>Embed a custom payment form on website or application.</li>
 <li>Accept payment without code.</li>
 </ul>
@@ -30,9 +30,20 @@ Subscription:
 </li>
 </ol>
 </section>
+<secttion id="start_building">
+<title>Start Building</title>
+<p>You can build different platforms and marketplaces, web and mobile apps and integrate PaySecure api to collect payments.</p>
+<p>For example:</p>
+<ol>
+<li>Ecommerce marketplaces</li>
+<li>Online stores</li>
+<li>Create a SaaS platform</li>
+</ol>
+<p>The above are just a few examples. You can build anything with PaySecure.</p>
+</section>
 <section id="next_steps">
 <title>Next Steps</title>
-<p>To get started with PayZip API, see <xref href="getting_started.dita">Getting Started</xref>.</p>
+<p>To get started with PaySecure API, see <xref href="getting_started.dita">Getting Started</xref>.</p>
 </section>
 </body>
 </topic>
