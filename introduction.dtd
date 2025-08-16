@@ -30,7 +30,7 @@ Subscription:
 </li>
 </ol>
 </section>
-<secttion id="start_building">
+<section id="start_building">
 <title>Start Building</title>
 <p>You can build different platforms and marketplaces, web and mobile apps and integrate PaySecure api to collect payments.</p>
 <p>For example:</p>
@@ -47,4 +47,3 @@ Subscription:
 </section>
 </body>
 </topic>
-
